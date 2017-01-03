@@ -1,0 +1,2 @@
+module BiensHelper
+end

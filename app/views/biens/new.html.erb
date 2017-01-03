@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= simple_form_for [@dossier, @bien] do |f|%>
+      <%= f.input :name %>
+      <%= f.input :valeur_empr %>
+      <%= f.input :prix_acq %>
+      <%= f.input :valeur_act %>
+      <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

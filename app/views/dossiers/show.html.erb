@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dossier.name %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @dossier.client %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @dossier.result %>
+</p>
+
+<%= link_to 'Edit', edit_dossier_path(@dossier) %> |
+<%= link_to 'Back', dossiers_path %> |
+<%= link_to 'new bien', new_dossier_bien_path(@dossier) %>
+
+<h2>Les Biens</h2>
+<% @biens.each do |bien| %>
+  <%= bien.name %> / <%= bien.profit_sub %>
+<% end %>
