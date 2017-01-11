@@ -6,13 +6,13 @@ a {
   border: none;
   box-shadow: none;
   outline: none;
-  color: #1E8BC3;
+  color: #34495E;
   font-weight: bold;
 }
 
 input[type="text"], textarea {
-outline: none;
-box-shadow:none !important;
+  outline: none;
+  box-shadow:none !important;
 }
 
 .formcalcul {
@@ -31,7 +31,7 @@ box-shadow:none !important;
   outline: none;
   text-align: center;
   background-color: white;
-  color: #1E8BC3;
+  color: #34495E;
   font-weight: bold
 }
 
@@ -39,6 +39,8 @@ box-shadow:none !important;
   border: 2px solid white;
   box-shadow: none;
   outline: none;
-  background-color: #1E8BC3;
+  background: #114357; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #114357 , #F29492); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #114357 , #F29492); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }

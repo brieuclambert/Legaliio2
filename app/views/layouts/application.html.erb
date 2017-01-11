@@ -8,7 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
-  <body style="background-color: #1E8BC3; color: white;" >
+  <body style="
+
+background: #114357; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #114357 , #F29492); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #114357 , #F29492); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        ; color: white;" >
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
