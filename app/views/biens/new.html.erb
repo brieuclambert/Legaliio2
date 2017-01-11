@@ -1,13 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
-      <%= simple_form_for [@dossier, @bien] do |f|%>
-      <%= f.input :name %>
-      <%= f.input :valeur_empr %>
-      <%= f.input :prix_acq %>
-      <%= f.input :valeur_act %>
-      <%= f.button :submit %>
-      <% end %>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="formcalcul">
+        <%= simple_form_for [@dossier, @bien], class: 'form-field' do |f|%>
+        <%= f.error_notification %>
+        <%= f.input :name, label: "Nom de la dépense" %>
+        <%= f.input :valeur_empr, label: "Valeur empruntée" %>
+        <%= f.input :prix_acq, label: "Coût d'acquisition" %>
+        <%= f.input :valeur_act, label: "Valeur actuelle" %>
+        <%= f.button :submit, "Go !" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
