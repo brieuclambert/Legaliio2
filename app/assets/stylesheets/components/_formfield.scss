@@ -1,0 +1,44 @@
+a {
+  color: white;
+}
+.form-control {
+  border-radius: 6px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  color: #1E8BC3;
+  font-weight: bold;
+}
+
+input[type="text"], textarea {
+outline: none;
+box-shadow:none !important;
+}
+
+.formcalcul {
+  margin-top: 30px;
+}
+
+.bnt, .btn-default {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  text-align: center;
+  background-color: white;
+  color: #1E8BC3;
+  font-weight: bold
+}
+
+.btn :hover, .btn-default :hover {
+  border: 2px solid white;
+  box-shadow: none;
+  outline: none;
+  background-color: #1E8BC3;
+  color: white;
+}
