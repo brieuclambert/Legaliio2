@@ -2,15 +2,22 @@ a {
   color: white;
 }
 .form-control {
-  border-radius: 6px;
+  // border-radius: 6px;
   border: none;
   box-shadow: none;
+  padding: 10px 30px;
   outline: none;
   color: #34495E;
   font-weight: bold;
 }
+.form-field {
+  padding: 10px 30px;
+}
 
-input[type="text"], textarea {
+input[type="text"],
+input[type='number'],
+input[type='password'],
+textarea {
   outline: none;
   box-shadow:none !important;
 }
@@ -29,6 +36,9 @@ input[type="text"], textarea {
   border: none;
   box-shadow: none;
   outline: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
   text-align: center;
   background-color: white;
   color: #34495E;
@@ -39,8 +49,39 @@ input[type="text"], textarea {
   border: 2px solid white;
   box-shadow: none;
   outline: none;
-  background: #114357; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #114357 , #F29492); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #114357 , #F29492); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #34495E;
   color: white;
 }
+
+.btn-default-big{
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

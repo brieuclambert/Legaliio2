@@ -1,33 +1,48 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-  <p>
-    <strong>Name:</strong>
-    <%= @dossier.name %>
-  </p>
-
-  <p>
-    <strong>Client:</strong>
-    <%= @dossier.client %>
-  </p>
-
-  <%= link_to 'Edit', edit_dossier_path(@dossier) %> |
-  <%= link_to 'Retour à tous les dossiers', dossiers_path %> |
-  <%= link_to 'Ajouter une dépense', new_dossier_bien_path(@dossier) %>
-
-  <h2>Les Dépenses</h2>
-  <% @biens.each do |bien| %>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card-depense">
-        <%= bien.name %>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card-table">
+      <h2>Les Dépenses</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Les dépenses (<%= @biens.length %>)</h3>
+          </div>
+          <div class="col-md-6">
+            <h3>Récompense</h3>
+          </div>
+        </div>
+        <div class="table-result">
+          <% @biens.each do |bien| %>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="table-result-element table-result-element-first">
+                <%= bien.name %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="table-result-element">
+                <%= bien.profit_sub %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card-depense">
-        <%= bien.profit_sub %>
-      </div>
-
-    </div>
   </div>
-  <% end %>
+  <div class="col-md-6">
+  <div class="card-table">
+    <h2>Le Dossier</h3>
+    <h3>Dossier : <%= @dossier.name %></h3>
+    <h3>Client : <%= @dossier.client %></h3>
+      <%= link_to 'Modifier', edit_dossier_path(@dossier) %> |
+      <%= link_to 'Retour à tous les dossiers', dossiers_path %> |
+      <%= link_to 'Ajouter une dépense', new_dossier_bien_path(@dossier) %>
+      </div>
+  </div>
+  </div>
 </div>
+
+
+
+
