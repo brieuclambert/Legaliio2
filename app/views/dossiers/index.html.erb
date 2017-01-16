@@ -10,23 +10,23 @@
   </div>
   <% count = 0 %>
   <% @dossiers.each do |dossier| %>
-  <%= link_to dossier do %>
-  <div class="row">
-    <div class="col-md-offset-2 col-md-1">
-      <%= count += 1 %>
+    <%= link_to dossier do %>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-1">
+        <%= count += 1 %>
+      </div>
+      <div class="col-md-2">
+        <%= dossier.name %>
+      </div>
+      <div class="col-md-2">
+        <%= dossier.client %>
+      </div>
+      <div class="col-md-3">
+        <%= link_to 'Edit', edit_dossier_path(dossier) %>
+        <%= link_to 'Destroy', dossier, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
-    <div class="col-md-2">
-      <%= dossier.name %>
-    </div>
-    <div class="col-md-2">
-      <%= dossier.client %>
-    </div>
-    <div class="col-md-3">
-      <%= link_to 'Edit', edit_dossier_path(dossier) %>
-      <%= link_to 'Destroy', dossier, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  </div>
-  <% end %>
+    <% end %>
   <% end %>
 </div>
 
